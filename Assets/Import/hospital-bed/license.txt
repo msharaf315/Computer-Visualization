@@ -1,0 +1,11 @@
+Model Information:
+* title:	Simple Hospital Bed
+* source:	https://sketchfab.com/3d-models/simple-hospital-bed-60651eac7e96454c8cf5c43a91412336
+* author:	Yvo Pors (https://sketchfab.com/yvopors14)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Simple Hospital Bed" (https://sketchfab.com/3d-models/simple-hospital-bed-60651eac7e96454c8cf5c43a91412336) by Yvo Pors (https://sketchfab.com/yvopors14) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Adjustable Bedside Table
+* source:	https://sketchfab.com/3d-models/adjustable-bedside-table-e3ef6fd54af440efa31984214dd6f11d
+* author:	Ethan Cragun (https://sketchfab.com/EDIIIC)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Adjustable Bedside Table" (https://sketchfab.com/3d-models/adjustable-bedside-table-e3ef6fd54af440efa31984214dd6f11d) by Ethan Cragun (https://sketchfab.com/EDIIIC) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
