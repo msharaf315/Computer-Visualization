@@ -1,0 +1,11 @@
+Model Information:
+* title:	Realistic Tweezers
+* source:	https://sketchfab.com/3d-models/realistic-tweezers-d6818a4ba9354b6999fae86422a96dc8
+* author:	Kollapse3D (https://sketchfab.com/Kollapse3D)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Realistic Tweezers" (https://sketchfab.com/3d-models/realistic-tweezers-d6818a4ba9354b6999fae86422a96dc8) by Kollapse3D (https://sketchfab.com/Kollapse3D) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
