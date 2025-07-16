@@ -1,0 +1,11 @@
+Model Information:
+* title:	Human mouth detailed
+* source:	https://sketchfab.com/3d-models/human-mouth-detailed-522eda0ec0e3413a914b1b298a791320
+* author:	Mince (https://sketchfab.com/Mince)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Human mouth detailed" (https://sketchfab.com/3d-models/human-mouth-detailed-522eda0ec0e3413a914b1b298a791320) by Mince (https://sketchfab.com/Mince) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
