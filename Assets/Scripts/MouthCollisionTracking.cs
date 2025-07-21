@@ -10,21 +10,18 @@ public class MouthCollisionTracking : MonoBehaviour
         if (collision.gameObject.CompareTag("Mouth"))
         {
             Debug.Log("$Colliding with Mouth");
+            currentCollidingObject = collision.gameObject;
+            collisionStartTime = Time.time;
         }
-
-        Debug.Log($"Started colliding with {currentCollidingObject}");
-        currentCollidingObject = collision.gameObject;
-        collisionStartTime = Time.time;
     }
 
     void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("Mouth"))
         {
-            Debug.Log("$Colliding with Mouth");
+            Debug.Log($"Collision ended with {collision.gameObject} after {Time.time - collisionStartTime:F2} seconds");
+            currentCollidingObject = null;
+            collisionStartTime = 0f;
         }
-             Debug.Log($"Collision ended with {collision.gameObject} after {Time.time - collisionStartTime:F2} seconds");
-                currentCollidingObject = null;
-                collisionStartTime = 0f;
-      }
+    }
 }
