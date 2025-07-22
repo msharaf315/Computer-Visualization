@@ -6,8 +6,8 @@ public class BladeHaptics : MonoBehaviour
     // Haptic feedback settings
     [Header("Haptic Settings")]
     [Range(0, 1)]
-    public float intensity = 0.7f;
-    public float duration = 0.1f;
+    public float intensity = 1.0f;
+    public float duration = 0.2f;
 
     // A reference to the knife's XRGrabInteractable component
     private XRGrabInteractable grabInteractable;
