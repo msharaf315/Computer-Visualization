@@ -9,7 +9,7 @@ public class MouthCollisionTracking : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Mouth"))
         {
-            Debug.Log("$Colliding with Mouth");
+            // Debug.Log("$Colliding with Mouth");
             currentCollidingObject = collision.gameObject;
             collisionStartTime = Time.time;
         }
@@ -19,7 +19,7 @@ public class MouthCollisionTracking : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Mouth"))
         {
-            Debug.Log($"Collision ended with {collision.gameObject} after {Time.time - collisionStartTime:F2} seconds");
+            // Debug.Log($"Collision ended with {collision.gameObject} after {Time.time - collisionStartTime:F2} seconds");
             currentCollidingObject = null;
             collisionStartTime = 0f;
         }

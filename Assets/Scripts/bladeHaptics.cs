@@ -35,7 +35,7 @@ public class BladeHaptics : MonoBehaviour
                     {
                         // Send the haptic impulse to the controller
                         controllerInteractor.xrController.SendHapticImpulse(intensity, duration);
-                        Debug.Log($"Haptics sent to {controllerInteractor.xrController.name} on collision with {other.name}.");
+                        // Debug.Log($"Haptics sent to {controllerInteractor.xrController.name} on collision with {other.name}.");
                     }
                 }
             }
