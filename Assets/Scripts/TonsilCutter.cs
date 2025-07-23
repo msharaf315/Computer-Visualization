@@ -15,6 +15,7 @@ public class TonsilCutter : MonoBehaviour
     private String tonsilLeftTag = "Left-Tonsil";
     private String tonsilRightTag = "Right-Tonsil";
 
+    private Vector3 tonsilScale = new Vector3(0.15f, 0.07f, 0.075f);
 
     private bool CompareTags(Collider other)
     {
@@ -75,7 +76,7 @@ public class TonsilCutter : MonoBehaviour
             GameObject pieceToFall = null;
             GameObject pieceToStay = null;
 
-            if (target.CompareTag(tonsilLeftTag))
+            if (target.CompareTag(tonsilRightTag))
             {
                 // GOAL: Detach the right side of the left tonsil.
                 // The "right" piece is in the direction of the positive X-axis.
@@ -83,16 +84,16 @@ public class TonsilCutter : MonoBehaviour
                 // Otherwise, the lower hull is the right piece.
                 pieceToFall = (sliceNormal.x > 0) ? upperHull : lowerHull;
                 pieceToStay = (sliceNormal.x > 0) ? lowerHull : upperHull;
-                pieceToStayTag = tonsilLeftTag;
+                pieceToStayTag = tonsilRightTag;
             }
-            else if (target.CompareTag(tonsilRightTag))
+            else if (target.CompareTag(tonsilLeftTag))
             {
                 // The "left" piece is in the direction of the negative X-axis.
                 // If sliceNormal.x < 0, the upper hull is the left piece.
                 // Otherwise, the lower hull is the left piece.
                 pieceToFall = (sliceNormal.x < 0) ? upperHull : lowerHull;
                 pieceToStay = (sliceNormal.x < 0) ? lowerHull : upperHull;
-                pieceToStayTag = tonsilRightTag;
+                pieceToStayTag = tonsilLeftTag;
             }
             // If we successfully identified the pieces (i.e., a tonsil was cut)
             if (pieceToFall != null && pieceToStay != null)
@@ -102,7 +103,7 @@ public class TonsilCutter : MonoBehaviour
                 pieceToStay.tag = pieceToStayTag;
                 // Set its transform to match the original object
                 pieceToStay.transform.SetPositionAndRotation(target.transform.position, target.transform.rotation);
-                pieceToStay.transform.localScale = target.transform.localScale;
+                pieceToStay.transform.localScale = tonsilScale;
                 // Add a collider so it's still detectable
                 pieceToStay.AddComponent<MeshCollider>().convex = true;
 
@@ -111,7 +112,7 @@ public class TonsilCutter : MonoBehaviour
                 pieceToFall.tag = tonsilTag;
                 // Set its transform
                 pieceToFall.transform.SetPositionAndRotation(target.transform.position, target.transform.rotation);
-                pieceToFall.transform.localScale = target.transform.localScale;
+                pieceToFall.transform.localScale = tonsilScale;
                 // Add physics components to make it fall
                 pieceToFall.AddComponent<MeshCollider>().convex = true;
                 Rigidbody rb = pieceToFall.AddComponent<Rigidbody>();
@@ -121,18 +122,18 @@ public class TonsilCutter : MonoBehaviour
             }
             else if (target.CompareTag(tonsilTag))
             {
-                // FALLBACK: If the sliced object was not a tonsil, use the original behavior
+                
                 // where both pieces get a Rigidbody.
-                upperHull.AddComponent<Rigidbody>();
+                // upperHull.AddComponent<Rigidbody>();
                 upperHull.AddComponent<MeshCollider>().convex = true;
                 upperHull.transform.SetPositionAndRotation(target.transform.position, target.transform.rotation);
-                upperHull.transform.localScale = target.transform.localScale;
+                upperHull.transform.localScale = tonsilScale;
 
-                lowerHull.AddComponent<Rigidbody>();
+                // lowerHull.AddComponent<Rigidbody>();
                 lowerHull.AddComponent<MeshCollider>().convex = true;
                 lowerHull.transform.SetPositionAndRotation(target.transform.position, target.transform.rotation);
-                lowerHull.transform.localScale = target.transform.localScale;
 
+                lowerHull.transform.localScale = tonsilScale;
                 lowerHull.tag = tonsilTag;
                 upperHull.tag = tonsilTag;
 
