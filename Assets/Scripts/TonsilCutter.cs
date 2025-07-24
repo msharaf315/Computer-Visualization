@@ -15,7 +15,7 @@ public class TonsilCutter : MonoBehaviour
     private String tonsilLeftTag = "Left-Tonsil";
     private String tonsilRightTag = "Right-Tonsil";
 
-    private Vector3 tonsilScale = new Vector3(0.15f, 0.07f, 0.075f);
+    private Vector3 tonsilScale = new Vector3(0.13f, 0.06f, 0.06f);
 
     private bool CompareTags(Collider other)
     {
@@ -114,30 +114,31 @@ public class TonsilCutter : MonoBehaviour
                 pieceToFall.transform.SetPositionAndRotation(target.transform.position, target.transform.rotation);
                 pieceToFall.transform.localScale = tonsilScale;
                 // Add physics components to make it fall
-                pieceToFall.AddComponent<MeshCollider>().convex = true;
                 Rigidbody rb = pieceToFall.AddComponent<Rigidbody>();
-
+                rb.AddForce(Vector3.up * 2f, ForceMode.Impulse);
+                rb.isKinematic = true;
+                pieceToFall.AddComponent<MeshCollider>().convex = true;
                 // Remove the original, unsliced object from the scene
                 Destroy(target);
             }
             else if (target.CompareTag(tonsilTag))
             {
                 
-                // where both pieces get a Rigidbody.
-                // upperHull.AddComponent<Rigidbody>();
-                upperHull.AddComponent<MeshCollider>().convex = true;
-                upperHull.transform.SetPositionAndRotation(target.transform.position, target.transform.rotation);
-                upperHull.transform.localScale = tonsilScale;
+                // // where both pieces get a Rigidbody.
+                // // upperHull.AddComponent<Rigidbody>();
+                // upperHull.AddComponent<MeshCollider>().convex = true;
+                // upperHull.transform.SetPositionAndRotation(target.transform.position, target.transform.rotation);
+                // upperHull.transform.localScale = tonsilScale;
 
-                // lowerHull.AddComponent<Rigidbody>();
-                lowerHull.AddComponent<MeshCollider>().convex = true;
-                lowerHull.transform.SetPositionAndRotation(target.transform.position, target.transform.rotation);
+                // // lowerHull.AddComponent<Rigidbody>();
+                // lowerHull.AddComponent<MeshCollider>().convex = true;
+                // lowerHull.transform.SetPositionAndRotation(target.transform.position, target.transform.rotation);
 
-                lowerHull.transform.localScale = tonsilScale;
-                lowerHull.tag = tonsilTag;
-                upperHull.tag = tonsilTag;
+                // lowerHull.transform.localScale = tonsilScale;
+                // lowerHull.tag = tonsilTag;
+                // upperHull.tag = tonsilTag;
 
-                Destroy(target);
+                // Destroy(target);
             }
 
 
